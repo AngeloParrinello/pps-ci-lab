@@ -1,0 +1,12 @@
+name: pps-ci-lab
+on:
+  push:
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java
+        with:
+          java-version: 15
+      - name: Check
+        run: ./gradlew check
